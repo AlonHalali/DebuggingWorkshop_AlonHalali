@@ -52,13 +52,7 @@ Image *ReadImage(const char* filename)
 	uint16_t imgsize = img->header.width * img->header.height;
 	img->data = new char[imgsize];
 
-	// read image content
-	char* tmpbuff = new char[img->header.width];
-	for (int i = 0; i < img->header.height; i++)
-	{
-		is.read(tmpbuff, img->header.width);
-		memcpy(img->data + (i * img->header.width), tmpbuff, img->header.width);
-	}
+    is.read(img->data, imgsize);
 	return img;
 }
 
@@ -93,7 +87,7 @@ Image *GenerateDummyImage(uint16_t width, uint16_t height)
 
 int main()
 {
-	Image *im = ReadImage("img1.magi");
+	Image *im = ReadImage("img2.magi");
 	FreeImage(im);
 
 	return 0;
