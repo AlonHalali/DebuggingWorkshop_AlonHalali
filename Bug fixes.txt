@@ -17,3 +17,9 @@
 
 באג - Shapes:
 שינוי הטיפוס של המשולש השני לTriangle
+
+באג - SafeAndSound:
+part1:
+שינוי גודל הdest ל 13 כך שיכיל גם את התו האחרון של המחרוזת
+part2:
+הוספת אופרטור = בתנאי בלולאת for בsafe_string_copy
